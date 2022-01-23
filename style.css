@@ -1,0 +1,133 @@
+@import url("https://fonts.googleapis.com/css2?family=Bungee+Outline&family=Dancing+Script:wght@400;500;600;700&family=Fredericka+the+Great&family=Goudy+Bookletter+1911&family=Neonderthaw&family=Noto+Serif+JP:wght@200;300;400;500;600;700;900&family=Oswald:wght@200;300;400;500;600;700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Quicksand:wght@600;700&family=Raleway:ital,wght@0,900;1,900&family=Redacted+Script:wght@300;400;700&family=Rubik+Beastly&family=Shizuru&family=Syncopate:wght@400;700&family=The+Nautigal:wght@400;700&display=swap");
+
+:root {
+  --ff1: "Bungee Outline", sans-serif;
+  --ff2: "Dancing Script", sans-serif;
+  --ff3: "Fredericka The Great", sans-serif;
+  --ff4: "Goudy Bookletter 1911", sans-serif;
+  --ff5: "Neonderthaw", sans-serif;
+  --ff6: "Oswald", sans-serif;
+  --ff7: "Poppins", sans-serif;
+  --ff8: "Quicksand", sans-serif;
+  --ff9: "Raleway", sans-serif;
+  --ff10: "Redacted Script", sans-serif;
+  --ff11: "Shizuru", sans-serif;
+  --ff12: "The Nautigal", sans-serif;
+  --ff13: "Rubik Beastly", sans-serif;
+  --ff14: "Noto Serif Japanese", sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: #000;
+}
+
+.container {
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container .ring {
+  position: relative;
+  width: 150px;
+  height: 150px;
+  margin: -30px;
+  border-radius: 50%;
+  border: solid 2px transparent;
+  border-top: 2px solid #24edff;
+  animation: animate 5s linear infinite;
+}
+
+@keyframes animate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.container .ring::before {
+  content: "";
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  border-radius: 50%;
+  width: 10px;
+  height: 10px;
+  background: #24edff;
+  box-shadow: 0 0 0 3px #24edff33, 0 0 0 8px #24edff22, 0 0 0 13px #24edff11,
+    0 0 18px #24edff, 0 0 36px #24edff;
+}
+.container .ring:nth-child(2) {
+  animation: animate2 5s linear infinite;
+  animation-delay: -1s;
+  border-left: 2px solid #3bff8f;
+  border-top: 2px solid transparent;
+}
+
+.container .ring:nth-child(2)::before {
+  content: "";
+  position: absolute;
+  top: initial;
+  bottom: 16px;
+  left: 16px;
+  border-radius: 50%;
+  width: 10px;
+  height: 10px;
+  background: #3bff8f;
+  box-shadow: 0 0 0 3px #3bff8f33, 0 0 0 8px #3bff8f22, 0 0 0 13px #3bff8f11,
+    0 0 18px #3bff8f, 0 0 36px #3bff8f;
+}
+
+.container .ring:nth-child(3) {
+  animation: animate2 5s linear infinite;
+  animation-delay: -3s;
+  border-left: 2px solid #ff4284;
+  border-top: 2px solid transparent;
+  position: absolute;
+  top: -77px;
+}
+
+.container .ring:nth-child(3)::before {
+  content: "";
+  position: absolute;
+  top: initial;
+  bottom: 16px;
+  left: 16px;
+  border-radius: 50%;
+  width: 10px;
+  height: 10px;
+  background: #ff4284;
+  box-shadow: 0 0 0 3px #ff428433, 0 0 0 8px #ff428422, 0 0 0 13px #ff428411,
+    0 0 18px #ff4284, 0 0 36px #ff4284;
+}
+
+@keyframes animate2 {
+  0% {
+    transform: rotate(360deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+p {
+  position: absolute;
+  color: #fff;
+  font-size: 1.5em;
+  font-family: var(--ff14);
+  bottom: -100px;
+  letter-spacing: 1em;
+}
