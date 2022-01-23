@@ -123,11 +123,11 @@ body {
     transform: rotate(0deg);
   }
 }
-p {
+.p {
   position: absolute;
   color: #fff;
-  font-size: 1.5em;
+  font-size: 1.15em;
   font-family: var(--ff14);
-  bottom: -100px;
-  letter-spacing: 1em;
+  bottom: -150px;
+  letter-spacing: 0.15em;
 }
